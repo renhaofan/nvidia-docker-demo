@@ -1,0 +1,20 @@
+version: '3.4'
+services:
+  workspace-vnc-gpu:
+    build:
+      context: .
+      dockerfile: bionic-gpu.Dockerfile
+      network: host
+    image: shenlanxueyuan/point-cloud-processing:ubuntu-bionic-gpu
+    container_name: point_cloud_analytics_workspace_cpu
+    volumes:
+      # assignments:
+      - ${PWD}/workspace/assignments:/workspace/assignments  
+      # data volume:
+      - ${PWD}/workspace/data:/workspace/data
+    # network_mode: host
+    ports:
+      # standard vnc client:
+      - 45901:5900
+      # supervisord admin:
+      - 49001:9001
