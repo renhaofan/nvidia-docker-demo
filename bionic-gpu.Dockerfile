@@ -103,12 +103,12 @@ EXPOSE 80 5900 9001
 WORKDIR /workspace
 
 # keep conda updated to the latest version:
-RUN conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ && \
-    conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/ && \
-    conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/ && \
-    conda config --append channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/fastai/ && \
-    conda config --append channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/ && \
-    conda config --append channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/ && \ 
+RUN conda config --add channels http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/ && \
+    conda config --add channels http://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/msys2/ && \
+    conda config --add channels http://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/ && \
+    conda config --append channels http://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/fastai/ && \
+    conda config --append channels http://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/ && \
+    conda config --append channels http://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/bioconda/ && \ 
     conda config --set show_channel_urls yes && \
     conda update conda
 
